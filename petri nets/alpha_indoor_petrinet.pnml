@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="alpha_classic_net_1677004256.6106951" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>alpha_classic_net_1677004256.6106951</text>
+    </name>
+    <page id="n0">
+      <place id="({'drink'}, {'end_writing', 'end_eat_meal', 'begin_sit_down'})">
+        <name>
+          <text>({'drink'}, {'end_writing', 'end_eat_meal', 'begin_sit_down'})</text>
+        </name>
+      </place>
+      <place id="({'begin_writing', 'begin_eat_meal', 'end_sit_down'}, {'drink'})">
+        <name>
+          <text>({'begin_writing', 'begin_eat_meal', 'end_sit_down'}, {'drink'})</text>
+        </name>
+      </place>
+      <place id="({'brush_air'}, {'writing', 'read'})">
+        <name>
+          <text>({'brush_air'}, {'writing', 'read'})</text>
+        </name>
+      </place>
+      <place id="({'drink'}, {'end_writing', 'read', 'end_eat_meal'})">
+        <name>
+          <text>({'drink'}, {'end_writing', 'read', 'end_eat_meal'})</text>
+        </name>
+      </place>
+      <place id="start">
+        <name>
+          <text>start</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="({'writing'}, {'go_out'})">
+        <name>
+          <text>({'writing'}, {'go_out'})</text>
+        </name>
+      </place>
+      <place id="({'go_out'}, {'begin_sit_down'})">
+        <name>
+          <text>({'go_out'}, {'begin_sit_down'})</text>
+        </name>
+      </place>
+      <place id="({'end_sit_down'}, {'go_out'})">
+        <name>
+          <text>({'end_sit_down'}, {'go_out'})</text>
+        </name>
+      </place>
+      <place id="end">
+        <name>
+          <text>end</text>
+        </name>
+      </place>
+      <place id="({'go_out'}, {'read'})">
+        <name>
+          <text>({'go_out'}, {'read'})</text>
+        </name>
+      </place>
+      <place id="({'brush_air', 'begin_sit_down'}, {'writing'})">
+        <name>
+          <text>({'brush_air', 'begin_sit_down'}, {'writing'})</text>
+        </name>
+      </place>
+      <place id="({'end_sit_down'}, {'play_phone', 'drink'})">
+        <name>
+          <text>({'end_sit_down'}, {'play_phone', 'drink'})</text>
+        </name>
+      </place>
+      <place id="({'end_sit_down'}, {'brush_air', 'play_phone'})">
+        <name>
+          <text>({'end_sit_down'}, {'brush_air', 'play_phone'})</text>
+        </name>
+      </place>
+      <place id="({'brush_air', 'play_phone'}, {'writing'})">
+        <name>
+          <text>({'brush_air', 'play_phone'}, {'writing'})</text>
+        </name>
+      </place>
+      <place id="({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})">
+        <name>
+          <text>({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})</text>
+        </name>
+      </place>
+      <place id="({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})">
+        <name>
+          <text>({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})</text>
+        </name>
+      </place>
+      <place id="({'begin_writing', 'begin_eat_meal', 'go_out'}, {'drink'})">
+        <name>
+          <text>({'begin_writing', 'begin_eat_meal', 'go_out'}, {'drink'})</text>
+        </name>
+      </place>
+      <transition id="end_sit_down">
+        <name>
+          <text>end_sit_down</text>
+        </name>
+      </transition>
+      <transition id="play_phone">
+        <name>
+          <text>play_phone</text>
+        </name>
+      </transition>
+      <transition id="drink">
+        <name>
+          <text>drink</text>
+        </name>
+      </transition>
+      <transition id="writing">
+        <name>
+          <text>writing</text>
+        </name>
+      </transition>
+      <transition id="begin_sit_down">
+        <name>
+          <text>begin_sit_down</text>
+        </name>
+      </transition>
+      <transition id="go_out">
+        <name>
+          <text>go_out</text>
+        </name>
+      </transition>
+      <transition id="brush_air">
+        <name>
+          <text>brush_air</text>
+        </name>
+      </transition>
+      <transition id="end_eat_meal">
+        <name>
+          <text>end_eat_meal</text>
+        </name>
+      </transition>
+      <transition id="read">
+        <name>
+          <text>read</text>
+        </name>
+      </transition>
+      <transition id="eat_meal">
+        <name>
+          <text>eat_meal</text>
+        </name>
+      </transition>
+      <transition id="begin_writing">
+        <name>
+          <text>begin_writing</text>
+        </name>
+      </transition>
+      <transition id="begin_eat_meal">
+        <name>
+          <text>begin_eat_meal</text>
+        </name>
+      </transition>
+      <transition id="end_writing">
+        <name>
+          <text>end_writing</text>
+        </name>
+      </transition>
+      <arc id="1538156013328" source="({'drink'}, {'end_writing', 'end_eat_meal', 'begin_sit_down'})" target="end_eat_meal"/>
+      <arc id="1538156012464" source="({'begin_writing', 'begin_eat_meal', 'end_sit_down'}, {'drink'})" target="drink"/>
+      <arc id="1538156009104" source="go_out" target="({'go_out'}, {'begin_sit_down'})"/>
+      <arc id="1538156009488" source="({'go_out'}, {'read'})" target="read"/>
+      <arc id="1538156007952" source="brush_air" target="end"/>
+      <arc id="1538156007568" source="start" target="drink"/>
+      <arc id="1538156008336" source="drink" target="end"/>
+      <arc id="1538156009872" source="({'brush_air', 'begin_sit_down'}, {'writing'})" target="writing"/>
+      <arc id="1538156010256" source="({'end_sit_down'}, {'play_phone', 'drink'})" target="drink"/>
+      <arc id="1538156010640" source="({'end_sit_down'}, {'brush_air', 'play_phone'})" target="play_phone"/>
+      <arc id="1538156011024" source="({'brush_air', 'play_phone'}, {'writing'})" target="writing"/>
+      <arc id="1538156011408" source="({'brush_air'}, {'writing', 'read'})" target="read"/>
+      <arc id="1538156012848" source="go_out" target="({'begin_writing', 'begin_eat_meal', 'go_out'}, {'drink'})"/>
+      <arc id="1538156013712" source="({'drink'}, {'end_writing', 'read', 'end_eat_meal'})" target="end_writing"/>
+      <arc id="1538156011984" source="({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})" target="eat_meal"/>
+      <arc id="1538156014096" source="writing" target="({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})"/>
+      <arc id="1538156013232" source="({'drink'}, {'end_writing', 'end_eat_meal', 'begin_sit_down'})" target="end_writing"/>
+      <arc id="1538156012368" source="end_sit_down" target="({'begin_writing', 'begin_eat_meal', 'end_sit_down'}, {'drink'})"/>
+      <arc id="1538156014480" source="({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})" target="end_sit_down"/>
+      <arc id="1538156009776" source="begin_sit_down" target="({'brush_air', 'begin_sit_down'}, {'writing'})"/>
+      <arc id="1538156009392" source="go_out" target="({'go_out'}, {'read'})"/>
+      <arc id="1538156007472" source="start" target="read"/>
+      <arc id="1538156008240" source="go_out" target="end"/>
+      <arc id="1538156008624" source="({'end_sit_down'}, {'go_out'})" target="go_out"/>
+      <arc id="1538156010160" source="({'end_sit_down'}, {'play_phone', 'drink'})" target="play_phone"/>
+      <arc id="1538156010544" source="({'end_sit_down'}, {'brush_air', 'play_phone'})" target="brush_air"/>
+      <arc id="1538156010928" source="play_phone" target="({'brush_air', 'play_phone'}, {'writing'})"/>
+      <arc id="1538156011312" source="({'brush_air'}, {'writing', 'read'})" target="writing"/>
+      <arc id="1538156011696" source="({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})" target="begin_writing"/>
+      <arc id="1538156012752" source="begin_eat_meal" target="({'begin_writing', 'begin_eat_meal', 'go_out'}, {'drink'})"/>
+      <arc id="1538156013616" source="drink" target="({'drink'}, {'end_writing', 'read', 'end_eat_meal'})"/>
+      <arc id="1538156013136" source="drink" target="({'drink'}, {'end_writing', 'end_eat_meal', 'begin_sit_down'})"/>
+      <arc id="1538156014384" source="eat_meal" target="({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})"/>
+      <arc id="1538156009680" source="brush_air" target="({'brush_air', 'begin_sit_down'}, {'writing'})"/>
+      <arc id="1538156007760" source="start" target="begin_sit_down"/>
+      <arc id="1538156008144" source="end_sit_down" target="end"/>
+      <arc id="1538156008528" source="end_sit_down" target="({'end_sit_down'}, {'go_out'})"/>
+      <arc id="1538156008912" source="({'writing'}, {'go_out'})" target="go_out"/>
+      <arc id="1538156010064" source="end_sit_down" target="({'end_sit_down'}, {'play_phone', 'drink'})"/>
+      <arc id="1538156010448" source="end_sit_down" target="({'end_sit_down'}, {'brush_air', 'play_phone'})"/>
+      <arc id="1538156010832" source="brush_air" target="({'brush_air', 'play_phone'}, {'writing'})"/>
+      <arc id="1538156011216" source="brush_air" target="({'brush_air'}, {'writing', 'read'})"/>
+      <arc id="1538156011600" source="begin_sit_down" target="({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})"/>
+      <arc id="1538156011792" source="({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})" target="begin_eat_meal"/>
+      <arc id="1538156013904" source="({'drink'}, {'end_writing', 'read', 'end_eat_meal'})" target="end_eat_meal"/>
+      <arc id="1538156012176" source="begin_writing" target="({'begin_writing', 'begin_eat_meal', 'end_sit_down'}, {'drink'})"/>
+      <arc id="1538156014288" source="end_writing" target="({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})"/>
+      <arc id="1538156009200" source="({'go_out'}, {'begin_sit_down'})" target="begin_sit_down"/>
+      <arc id="1538156007664" source="start" target="go_out"/>
+      <arc id="1538156008048" source="read" target="end"/>
+      <arc id="1538156008816" source="writing" target="({'writing'}, {'go_out'})"/>
+      <arc id="1538156011888" source="({'begin_sit_down'}, {'begin_writing', 'begin_eat_meal', 'writing', 'eat_meal'})" target="writing"/>
+      <arc id="1538156012272" source="begin_eat_meal" target="({'begin_writing', 'begin_eat_meal', 'end_sit_down'}, {'drink'})"/>
+      <arc id="1538156012656" source="begin_writing" target="({'begin_writing', 'begin_eat_meal', 'go_out'}, {'drink'})"/>
+      <arc id="1538156013424" source="({'drink'}, {'end_writing', 'end_eat_meal', 'begin_sit_down'})" target="begin_sit_down"/>
+      <arc id="1538156013808" source="({'drink'}, {'end_writing', 'read', 'end_eat_meal'})" target="read"/>
+      <arc id="1538156014192" source="end_eat_meal" target="({'writing', 'end_eat_meal', 'end_writing', 'eat_meal'}, {'end_sit_down'})"/>
+      <arc id="1538156012944" source="({'begin_writing', 'begin_eat_meal', 'go_out'}, {'drink'})" target="drink"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="end">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

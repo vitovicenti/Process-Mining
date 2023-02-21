@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="alpha_classic_net_1677004256.6106951" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>alpha_classic_net_1677004256.6106951</text>
+    </name>
+    <page id="n0">
+      <place id="start">
+        <name>
+          <text>start</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="({'buy_newspaper'}, {'go_to_supermarket'})">
+        <name>
+          <text>({'buy_newspaper'}, {'go_to_supermarket'})</text>
+        </name>
+      </place>
+      <place id="({'talk_to_a_friend'}, {'buy_newspaper'})">
+        <name>
+          <text>({'talk_to_a_friend'}, {'buy_newspaper'})</text>
+        </name>
+      </place>
+      <place id="end">
+        <name>
+          <text>end</text>
+        </name>
+      </place>
+      <place id="({'check_phone'}, {'return_home'})">
+        <name>
+          <text>({'check_phone'}, {'return_home'})</text>
+        </name>
+      </place>
+      <place id="({'talk_to_a_friend'}, {'return_home'})">
+        <name>
+          <text>({'talk_to_a_friend'}, {'return_home'})</text>
+        </name>
+      </place>
+      <place id="({'talk_to_a_friend'}, {'go_to_supermarket'})">
+        <name>
+          <text>({'talk_to_a_friend'}, {'go_to_supermarket'})</text>
+        </name>
+      </place>
+      <place id="({'check_phone'}, {'go_to_supermarket'})">
+        <name>
+          <text>({'check_phone'}, {'go_to_supermarket'})</text>
+        </name>
+      </place>
+      <place id="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})">
+        <name>
+          <text>({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})</text>
+        </name>
+      </place>
+      <place id="({'buy_newspaper', 'breakfast_at_bar'}, {'return_home'})">
+        <name>
+          <text>({'buy_newspaper', 'breakfast_at_bar'}, {'return_home'})</text>
+        </name>
+      </place>
+      <transition id="talk_to_a_friend">
+        <name>
+          <text>talk_to_a_friend</text>
+        </name>
+      </transition>
+      <transition id="buy_newspaper">
+        <name>
+          <text>buy_newspaper</text>
+        </name>
+      </transition>
+      <transition id="check_phone">
+        <name>
+          <text>check_phone</text>
+        </name>
+      </transition>
+      <transition id="return_home">
+        <name>
+          <text>return_home</text>
+        </name>
+      </transition>
+      <transition id="breakfast_at_bar">
+        <name>
+          <text>breakfast_at_bar</text>
+        </name>
+      </transition>
+      <transition id="go_to_supermarket">
+        <name>
+          <text>go_to_supermarket</text>
+        </name>
+      </transition>
+      <arc id="1538156015488" source="start" target="breakfast_at_bar"/>
+      <arc id="1538156016256" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'buy_newspaper'})"/>
+      <arc id="1538156016640" source="({'check_phone'}, {'return_home'})" target="return_home"/>
+      <arc id="1538156017792" source="go_to_supermarket" target="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})"/>
+      <arc id="1538156017408" source="check_phone" target="({'check_phone'}, {'go_to_supermarket'})"/>
+      <arc id="1538156018176" source="breakfast_at_bar" target="({'buy_newspaper', 'breakfast_at_bar'}, {'return_home'})"/>
+      <arc id="1538156015392" source="start" target="talk_to_a_friend"/>
+      <arc id="1538156015776" source="return_home" target="end"/>
+      <arc id="1538156016544" source="check_phone" target="({'check_phone'}, {'return_home'})"/>
+      <arc id="1538156016928" source="({'talk_to_a_friend'}, {'return_home'})" target="return_home"/>
+      <arc id="1538156017696" source="breakfast_at_bar" target="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})"/>
+      <arc id="1538156018080" source="buy_newspaper" target="({'buy_newspaper', 'breakfast_at_bar'}, {'return_home'})"/>
+      <arc id="1538156016064" source="({'buy_newspaper'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
+      <arc id="1538156016832" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'return_home'})"/>
+      <arc id="1538156017216" source="({'talk_to_a_friend'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
+      <arc id="1538156015968" source="buy_newspaper" target="({'buy_newspaper'}, {'go_to_supermarket'})"/>
+      <arc id="1538156015584" source="start" target="check_phone"/>
+      <arc id="1538156016352" source="({'talk_to_a_friend'}, {'buy_newspaper'})" target="buy_newspaper"/>
+      <arc id="1538156017888" source="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})" target="return_home"/>
+      <arc id="1538156017120" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'go_to_supermarket'})"/>
+      <arc id="1538156017504" source="({'check_phone'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
+      <arc id="1538156018272" source="({'buy_newspaper', 'breakfast_at_bar'}, {'return_home'})" target="return_home"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="end">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
