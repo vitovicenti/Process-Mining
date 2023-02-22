@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pnml>
-  <net id="alpha_classic_net_1677057488.620096" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+  <net id="alpha_classic_net_1677058316.5326824" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
     <name>
-      <text>alpha_classic_net_1677057488.620096</text>
+      <text>alpha_classic_net_1677058316.5326824</text>
     </name>
     <page id="n0">
       <place id="start">
@@ -12,6 +12,11 @@
         <initialMarking>
           <text>1</text>
         </initialMarking>
+      </place>
+      <place id="({'check_phone'}, {'return_home'})">
+        <name>
+          <text>({'check_phone'}, {'return_home'})</text>
+        </name>
       </place>
       <place id="({'buy_newspaper'}, {'go_to_supermarket'})">
         <name>
@@ -26,11 +31,6 @@
       <place id="end">
         <name>
           <text>end</text>
-        </name>
-      </place>
-      <place id="({'check_phone'}, {'return_home'})">
-        <name>
-          <text>({'check_phone'}, {'return_home'})</text>
         </name>
       </place>
       <place id="({'talk_to_a_friend'}, {'return_home'})">
@@ -58,19 +58,14 @@
           <text>({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})</text>
         </name>
       </place>
+      <transition id="buy_newspaper">
+        <name>
+          <text>buy_newspaper</text>
+        </name>
+      </transition>
       <transition id="return_home">
         <name>
           <text>return_home</text>
-        </name>
-      </transition>
-      <transition id="go_to_supermarket">
-        <name>
-          <text>go_to_supermarket</text>
-        </name>
-      </transition>
-      <transition id="talk_to_a_friend">
-        <name>
-          <text>talk_to_a_friend</text>
         </name>
       </transition>
       <transition id="check_phone">
@@ -78,38 +73,43 @@
           <text>check_phone</text>
         </name>
       </transition>
+      <transition id="talk_to_a_friend">
+        <name>
+          <text>talk_to_a_friend</text>
+        </name>
+      </transition>
       <transition id="breakfast_at_bar">
         <name>
           <text>breakfast_at_bar</text>
         </name>
       </transition>
-      <transition id="buy_newspaper">
+      <transition id="go_to_supermarket">
         <name>
-          <text>buy_newspaper</text>
+          <text>go_to_supermarket</text>
         </name>
       </transition>
-      <arc id="2793268916096" source="start" target="breakfast_at_bar"/>
-      <arc id="2793268916864" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'buy_newspaper'})"/>
-      <arc id="2793268917248" source="({'check_phone'}, {'return_home'})" target="return_home"/>
-      <arc id="2793268918400" source="go_to_supermarket" target="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})"/>
-      <arc id="2793268918016" source="check_phone" target="({'check_phone'}, {'go_to_supermarket'})"/>
-      <arc id="2793268918784" source="buy_newspaper" target="({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})"/>
-      <arc id="2793268916000" source="start" target="talk_to_a_friend"/>
-      <arc id="2793268916384" source="return_home" target="end"/>
-      <arc id="2793268917152" source="check_phone" target="({'check_phone'}, {'return_home'})"/>
-      <arc id="2793268917536" source="({'talk_to_a_friend'}, {'return_home'})" target="return_home"/>
-      <arc id="2793268918304" source="breakfast_at_bar" target="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})"/>
-      <arc id="2793268918688" source="breakfast_at_bar" target="({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})"/>
-      <arc id="2793268916672" source="({'buy_newspaper'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
-      <arc id="2793268917440" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'return_home'})"/>
-      <arc id="2793268917824" source="({'talk_to_a_friend'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
-      <arc id="2793268916576" source="buy_newspaper" target="({'buy_newspaper'}, {'go_to_supermarket'})"/>
-      <arc id="2793268916192" source="start" target="check_phone"/>
-      <arc id="2793268916960" source="({'talk_to_a_friend'}, {'buy_newspaper'})" target="buy_newspaper"/>
-      <arc id="2793268918496" source="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})" target="return_home"/>
-      <arc id="2793268917728" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'go_to_supermarket'})"/>
-      <arc id="2793268918112" source="({'check_phone'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
-      <arc id="2793268918880" source="({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})" target="return_home"/>
+      <arc id="2634546820624" source="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})" target="return_home"/>
+      <arc id="2634546819856" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'go_to_supermarket'})"/>
+      <arc id="2634546818320" source="start" target="check_phone"/>
+      <arc id="2634546818704" source="buy_newspaper" target="({'buy_newspaper'}, {'go_to_supermarket'})"/>
+      <arc id="2634546819088" source="({'talk_to_a_friend'}, {'buy_newspaper'})" target="buy_newspaper"/>
+      <arc id="2634546820240" source="({'check_phone'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
+      <arc id="2634546821008" source="({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})" target="return_home"/>
+      <arc id="2634546818224" source="start" target="talk_to_a_friend"/>
+      <arc id="2634546818992" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'buy_newspaper'})"/>
+      <arc id="2634546819376" source="({'check_phone'}, {'return_home'})" target="return_home"/>
+      <arc id="2634546820144" source="check_phone" target="({'check_phone'}, {'go_to_supermarket'})"/>
+      <arc id="2634546820528" source="go_to_supermarket" target="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})"/>
+      <arc id="2634546820912" source="buy_newspaper" target="({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})"/>
+      <arc id="2634546819664" source="({'talk_to_a_friend'}, {'return_home'})" target="return_home"/>
+      <arc id="2634546818128" source="start" target="breakfast_at_bar"/>
+      <arc id="2634546818512" source="return_home" target="end"/>
+      <arc id="2634546819280" source="check_phone" target="({'check_phone'}, {'return_home'})"/>
+      <arc id="2634546820432" source="breakfast_at_bar" target="({'breakfast_at_bar', 'go_to_supermarket'}, {'return_home'})"/>
+      <arc id="2634546820816" source="breakfast_at_bar" target="({'breakfast_at_bar', 'buy_newspaper'}, {'return_home'})"/>
+      <arc id="2634546819568" source="talk_to_a_friend" target="({'talk_to_a_friend'}, {'return_home'})"/>
+      <arc id="2634546819952" source="({'talk_to_a_friend'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
+      <arc id="2634546818800" source="({'buy_newspaper'}, {'go_to_supermarket'})" target="go_to_supermarket"/>
     </page>
     <finalmarkings>
       <marking>

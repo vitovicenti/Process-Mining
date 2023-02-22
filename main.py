@@ -2,8 +2,6 @@ import pandas as pd
 import pm4py
 import os
 
-from pm4py.algo.conformance.tokenreplay import algorithm as token_based_replay
-
 import activities_list
 import conformance_check
 
@@ -28,10 +26,8 @@ if __name__ == '__main__':
     ind_in_net, ind_in_im, ind_in_fm = pm4py.discover_petri_net_inductive(in_log)
     ind_out_net, ind_out_im, ind_out_fm = pm4py.discover_petri_net_inductive(out_log)
 
-    # Heuristic Net
-    indoor_map = pm4py.discover_heuristics_net(in_log)
-    outdoor_map = pm4py.discover_heuristics_net(out_log)
 
+    # create pnml files of the Petri nets
     pm4py.write_pnml(alpha_in_net, alpha_in_im, alpha_in_fm, "petri nets/alpha_indoor_petrinet.pnml")
     pm4py.write_pnml(ind_in_net, ind_in_im, ind_in_fm, "petri nets/inductive_indoor_petrinet.pnml")
 
@@ -63,5 +59,3 @@ if __name__ == '__main__':
 
     print("\nOutdoor activities")
     conformance_check.conformance_checking(outdoor_test_log, ind_out_net, ind_out_im, ind_out_fm)
-
-
