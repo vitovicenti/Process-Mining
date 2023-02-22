@@ -9,7 +9,7 @@ def conformance_checking(log, net, im, fm):
         i=0
         print(" ")
         while i < len(replayed_traces):
-            print("Processo num. ", i+1)
+            print("Process num. ", i+1)
             if( (replayed_traces[i]['trace_is_fit']) == True ):
                 print("\t Regular! Fitness:",  round(replayed_traces[i]['trace_fitness'],2))
             else:
